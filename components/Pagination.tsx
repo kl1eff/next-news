@@ -2,17 +2,19 @@
 
 import { useSearchParams } from 'next/navigation';
 import PageButton from './PageButton';
+import { categories } from '@/constants';
 
 function Pagination({ pageAmount }: { pageAmount: number }) {
   const buttons = [];
+  console.log(useSearchParams().get('keyword'))
 
   for (let i = 0; i < pageAmount; i++) {
     buttons.push(
       <PageButton
         key={i}
         pageNumber={i}
-        category={useSearchParams().get('category') || 'general'}
-        keyword={useSearchParams().get('keyword') || ''}
+        category={useSearchParams().get('category') || categories.join(',')}
+        keywords={useSearchParams().get('keywords') || ''}
         isActive={+(useSearchParams().get('p') || 0) === i}
       />
     );

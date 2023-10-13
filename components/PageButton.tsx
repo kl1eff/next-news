@@ -1,12 +1,12 @@
 'use client';
 import Link from 'next/link';
 
-function PageButton({ pageNumber, category, keyword, isActive }
-  : { pageNumber: number; category: string; keyword: string; isActive: boolean }) {
+function PageButton({ pageNumber, category, keywords, isActive }
+  : { pageNumber: number; category: string; keywords: string; isActive: boolean }) {
   if (!isActive) {
     return (
       <Link className="w-10 h-10 bg-slate-700 flex justify-center items-center
-       text-white font-semibold rounded-xl" href={`/?category=${category}&keyword=${keyword}&p=${pageNumber}`}>
+       text-white font-semibold rounded-xl" href={`/?category=${category}&keywords=${keywords}&p=${pageNumber}`}>
         <span>{pageNumber + 1}</span>
       </Link>
     );

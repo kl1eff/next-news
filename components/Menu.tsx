@@ -12,7 +12,7 @@ function Menu() {
       <Bars3Icon className="h-8 w-8 cursor-pointer" onClick={() => setIsActive(!isActive)}/>
 
       <div className={`w-[85%] md:w-[17rem] bg-white p-10 shadow-xl flex justify-between h-screen z-10 fixed top-0 -left-1 transition-all ${isActive ? 'translate-x-0' : '-translate-x-full'} text-black`}>
-        <ul className="font-semibold flex flex-col gap-2">
+        <ul className="font-semibold flex flex-col gap-2" onClick={() => setIsActive(false)}>
           <li>
             <Link href="/?category=business">Business</Link>
           </li>

@@ -1,6 +1,7 @@
 import Pagination from './Pagination';
 import Article from './Article';
 
+
 function NewsList({ news }: { news: Article[] }) {
   return (
     <>
